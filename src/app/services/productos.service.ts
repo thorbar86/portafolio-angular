@@ -64,8 +64,7 @@ export class ProductosService {
 
     private filtrarProductos( termino: string) {
 
-      console.log (this.producto);
-      this.productosFiltrado = [];
+      this.productosFiltrados = [];
 
       termino = termino.toLocaleLowerCase();
   
@@ -75,7 +74,7 @@ export class ProductosService {
 
         if (prod.categoria.indexOf( termino ) >= 0 || tituloLower.indexOf ( termino ) >= 0 ) {
 
-          this.productosFiltrado.push( prod );
+          this.productosFiltrados.push( prod );
         }
       });
     }
